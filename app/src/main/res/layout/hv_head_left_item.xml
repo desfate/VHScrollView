@@ -10,10 +10,10 @@
     <TextView
         android:id="@+id/left_title"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="商品"
-        android:textColor="@color/p_global_black_color"
-        android:textSize="16sp"
-        android:gravity="center"></TextView>
+        android:layout_height="wrap_content"
+        android:text="采购方合同编号"
+        android:textColor="@color/p_title_color"
+        android:textSize="10sp"
+        android:layout_marginLeft="20dp" />
 
 </LinearLayout>

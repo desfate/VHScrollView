@@ -63,7 +63,7 @@ public class VHScrollView extends FrameLayout {
 
     private int background_color = R.color.p_global_write_color;
     private int title_color = R.color.p_global_write_color;
-    private int title_value_color = R.color.p_global_black_color;
+    private int title_value_color = R.color.p_title_color;
 
 
     private SyncHorizontalScrollView titleHorsv, contentHorsv; //联动部分
@@ -197,8 +197,9 @@ public class VHScrollView extends FrameLayout {
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(DeviceUtil.dpToPx(getContext(), right_title_width)
                     , DeviceUtil.dpToPx(getContext(), right_title_hight));  //设置宽高 （这个地方 理想的情况是根据手机屏幕宽度均分  晚点来弄）
             textView.setLayoutParams(lp);
-            textView.setTextSize(DeviceUtil.dpToPx(getContext(),5));
-            textView.setGravity(Gravity.CENTER);
+            textView.setTextSize(DeviceUtil.dpToPx(getContext(),4));
+            textView.setGravity(Gravity.CENTER_VERTICAL);
+            textView.setPadding(50,0,0,0);
             textView.setText(rightTitle.get(i));
             textView.setTextColor(getResources().getColor(title_value_color));
             right_title_container.addView(textView);

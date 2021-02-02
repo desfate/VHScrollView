@@ -87,7 +87,8 @@ public class ContentRightAdapter extends BaseAdapter {
 //                if(Config.Chart_Color){
 //                    textView.setTextColor(context.getResources().getColor(R.color.p_global_black_color));
 //                }
-                textView.setGravity(Gravity.CENTER);
+                textView.setPadding(40,0,0,0);
+                textView.setGravity(Gravity.CENTER_VERTICAL);
 //                TextViewCompat.setAutoSizeTextTypeWithDefaults(textView, TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM);  //自动变换
 //                TextViewCompat.setAutoSizeTextTypeWithDefaults(textView, DeviceUtil.dpToPx(5));
                 viewHold.head_right_layout.addView(textView);
