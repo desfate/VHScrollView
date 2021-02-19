@@ -68,7 +68,8 @@
                     android:id="@+id/left_container_listview"
                     android:layout_width="match_parent"
                     android:layout_gravity="center_horizontal"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"/>
             </LinearLayout>
 
             <!-- 右侧内容的父容器 实现水平滚动 -->
