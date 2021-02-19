@@ -7,6 +7,7 @@ package com.github.desfate.vhscrollview.models;
 public class TitleModel {
     private String goodsName;
     private String goodsCode;
+    private boolean state = false;
 
     public TitleModel(String goodsName, String goodsCode) {
         this.goodsName = goodsName;
@@ -27,5 +28,13 @@ public class TitleModel {
 
     public void setGoodsCode(String goodsCode) {
         this.goodsCode = goodsCode;
+    }
+
+    public boolean isState() {
+        return state;
+    }
+
+    public void setState(boolean state) {
+        this.state = state;
     }
 }

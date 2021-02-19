@@ -72,6 +72,15 @@ public class LeftHeaderAdapter extends BaseAdapter {
             params.width = DeviceUtil.dpToPx(context, width);
             params.height = DeviceUtil.dpToPx(context, hight);
             hold.layout.setLayoutParams(params);
+
+            hold.layout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    cleanViews();
+                    list.get(position).setState(!list.get(position).isState());
+                    notifyDataSetChanged();
+                }
+            });
             convertView.setTag(hold);
         } else {
             hold = (ViewHold) convertView.getTag();
@@ -83,6 +92,18 @@ public class LeftHeaderAdapter extends BaseAdapter {
         } else {
             hold.goodsCode.setText(list.get(position).getGoodsCode());
         }
+
+        if(list.get(position).isState()){
+            FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) hold.layout.getLayoutParams();
+            params.width = DeviceUtil.dpToPx(context, width);
+            params.height = DeviceUtil.dpToPx(context, hight * 2 + 1);
+            hold.layout.setLayoutParams(params);
+        }else{
+            FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) hold.layout.getLayoutParams();
+            params.width = DeviceUtil.dpToPx(context, width);
+            params.height = DeviceUtil.dpToPx(context, hight);
+            hold.layout.setLayoutParams(params);
+        }
         return convertView;
     }
 
@@ -90,6 +111,12 @@ public class LeftHeaderAdapter extends BaseAdapter {
         LinearLayout layout;
         TextView goodsName;
         TextView goodsCode;
+    }
+
+    public void cleanViews(){
+        for(TitleModel model : list){
+            model.setState(false);
+        }
     }
 
 }

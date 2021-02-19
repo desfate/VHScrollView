@@ -115,7 +115,6 @@ public class VHScrollView extends FrameLayout {
      * @param hight 标题高度
      */
     public void setLiftTitleSize(int width, int hight) {
-
         this.title_width = width;
         this.title_hight = hight;
     }
